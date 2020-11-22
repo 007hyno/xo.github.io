@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="xo.css">
-    <script type="text/javascript" src="xo.js"></script>
+    <script src="xo.js" type="application/javascript" charset="utf-8"></script>
     
 
 </head>
@@ -28,22 +28,23 @@
               </nav>
               <form action="https://github.com/007hyno">
                   <button class="inline-flex items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-white mt-4 md:mt-0">Github
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                           <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                  </button>
-              </form>
+                        </svg>
+                      </button>
+                    </form>
             </div>
         </header>
         <!-- //////////////////////////////main////////////////////////////// -->
         <section>
-            <div class="mx-auto bg-red-500 rounded-xl w-1/4">
-                <h1 class="title-font text-white text-3xl text-center font-medium">TicTacToe</h1>
-                <p class="ghost" id="n">0</p>
-            </div>
+          <div class="mx-auto bg-red-500 rounded w-1/4">
+            <h1 class="title-font text-white lg:text-3xl text-xl text-center font-medium">TicTacToe</h1>
+            <p class="ghost" id="bi">0</p>
+          </div>
         </section>
         <section class= " my-8 text-center mx-auto bg-red-200 p-16">
-                <div class="flex flex-wrap w-1/3 w-1/3 sm:w-1/2 md:w-1/2 rounded-xl lg:w-1/3 xl:w-1/3 mx-auto h-10 xl:h-40 lg:h-32 md:h-32 sm:h-24">
+          <button id="res" onclick=reload() class="bg-white mx-auto my-5 text-center bordedr shadow p-2 rounded text-gray-800 font-medium">Restart</button>
+          <div class="flex flex-wrap w-1/3 w-1/3 sm:w-1/2 md:w-1/2 rounded-xl lg:w-1/3 xl:w-1/3 mx-auto h-10 xl:h-40 lg:h-32 md:h-32 sm:h-24">
                     <div id="a" class="md:text-5xl sm:text-2xl w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3 mx-auto border-2 border bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500 rounded-lg" onclick=painter(id)></div>
                     <div id="b" class="md:text-5xl sm:text-2xl w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3 mx-auto border-2 border bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500 rounded-lg" onclick=painter(id)></div>
                     <div id="c" class="md:text-5xl sm:text-2xl w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3 mx-auto border-2 border bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500 rounded-lg" onclick=painter(id)></div>
@@ -63,12 +64,9 @@
 
             <!-- Modal content -->
             <div class="modal-content rounded">
-              <div class="modal-header">
-                <span class="close">&times;</span>
-              </div>
               <div class="modal-body text-center">
                 <h1 id="win" class="bg-red-300 my-5 title-font text-red-600 text-4xl text-center font-semibold"></h1>
-                <span id="restart" onclick=reload() class="mx-auto my-5 text-center bordedr shadow p-2 rounded text-gray-800 font-medium">Restart</span>
+                <button id="restart" onclick=reload() class="mx-auto my-5 text-center bordedr shadow p-2 rounded text-gray-800 font-medium">Restart</button>
               </div>
             </div>
           </div>
